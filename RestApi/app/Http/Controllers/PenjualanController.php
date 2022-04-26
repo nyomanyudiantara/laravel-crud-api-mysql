@@ -46,6 +46,13 @@ class PenjualanController extends Controller
         return "Penjualan Updated!";
     }
 
+    public function delete($id) {
+        $penjualan = Penjualan::find($id);
+        $penjualan -> delete();
+
+        return "Penjualan Deleted";
+    }
+
     public function detail($id) {
         $penjualan = Penjualan::find($id);
 
